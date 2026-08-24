@@ -8,10 +8,10 @@
 </p>
 
 <p align="center">
-  <img src="assets/error_pattern_distribution.png" width="95%">
+  <img src="assets/fig1_framework_overview.png" width="100%">
 </p>
 
-<p align="center"><i>Motivation. (a) TTU-SQL vs. existing Text-to-SQL improvement paradigms. (b) Distribution of systematic error patterns on Spider Dev (DeepSeek-R1-Distill-Qwen-7B after OmniSQL SFT).</i></p>
+<p align="center"><i>Overview of the TTU-SQL framework. The pipeline is organized into three modules: probe-based diagnosis, AST-based localization with forgettable error extraction, and Part-NPO followed by recovery SFT.</i></p>
 
 ## 📝 Summary
 
@@ -24,12 +24,6 @@ The framework has three components:
 3. **Part-NPO** — applies Negative Preference Optimization **only to the localized divergence tokens**, suppressing erroneous continuations while preserving useful SQL-generation knowledge. This is followed by a recovery SFT.
 
 Across **Spider** and **BIRD**, TTU-SQL yields consistent execution-accuracy gains over equal-budget Direct SFT across the evaluated backbones.
-
-<p align="center">
-  <img src="assets/fig1_framework_overview.png" width="100%">
-</p>
-
-<p align="center"><i>TTU-SQL framework: diagnose → locate → unlearn (Part-NPO) → recover.</i></p>
 
 ## 📁 Repository
 
