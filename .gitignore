@@ -1,0 +1,55 @@
+# macOS
+.DS_Store
+._*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+.profile_shutdown
+
+# Large model artifacts & generated data (not part of the source release)
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+*.pth
+checkpoints/
+output/
+outputs/
+wandb/
+runs/
+*.log
+
+# Local data & predictions (regenerate via the pipeline)
+data/
+*.jsonl
+predictions.jsonl
+generated_predictions_*.json
+forget_class_*.json
+forget_format/
+to_forget/
+*_with_exec.json
+*_exec_summary.txt
+split_stats.json
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
